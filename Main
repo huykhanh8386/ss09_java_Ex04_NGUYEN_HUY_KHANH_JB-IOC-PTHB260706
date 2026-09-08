@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Ex04Session09Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập mã hàng: ");
+        String itemCode = scanner.nextLine();
+        System.out.print("Nhập tên hàng: ");
+        String itemName = scanner.nextLine();
+        System.out.print("Nhập đơn giá: ");
+        double price = Double.parseDouble(scanner.nextLine());
+        System.out.print("Nhập số lượng tồn ban đầu: ");
+        int quantity = Integer.parseInt(scanner.nextLine());
+        Ex04Session09 item = new Ex04Session09(itemCode, itemName, price, quantity);
+        System.out.println("\n===== THÔNG TIN MẶT HÀNG =====");
+        item.displayItem();
+        System.out.print("\nNhập số lượng muốn cập nhật: ");
+        int newQuantity = Integer.parseInt(scanner.nextLine());
+        item.setQuantity(newQuantity);
+        System.out.println("\n===== SAU KHI CẬP NHẬT =====");
+        item.displayItem();
+    }
+}

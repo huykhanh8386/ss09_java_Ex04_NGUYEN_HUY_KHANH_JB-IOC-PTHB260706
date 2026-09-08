@@ -1,0 +1,46 @@
+public class Ex04Session09 {
+    private String itemCode;
+    private String itemName;
+    private double price;
+    private int quantity;
+    public Ex04Session09(String itemCode, String itemName, double price, int quantity) {
+        this.itemCode = itemCode;
+        this.itemName = itemName;
+        this.price = price;
+        this.setQuantity(quantity);
+    }
+    public String getItemCode() {
+        return this.itemCode;
+    }
+    public void setItemCode(String itemCode) {
+        this.itemCode = itemCode;
+    }
+    public String getItemName() {
+        return this.itemName;
+    }
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
+    }
+    public double getPrice() {
+        return this.price;
+    }
+    public void setPrice(double price) {
+        this.price = price;
+    }
+    public int getQuantity() {
+        return this.quantity;
+    }
+    public void setQuantity(int quantity) {
+        if (quantity >= 0) {
+            this.quantity = quantity;
+        } else {
+            System.out.println("Lỗi: Số lượng tồn kho không được âm!");
+        }
+    }
+    public void displayItem() {
+        System.out.println("Mã hàng: " + this.itemCode);
+        System.out.println("Tên hàng: " + this.itemName);
+        System.out.println("Đơn giá: " + this.price);
+        System.out.println("Số lượng tồn: " + this.quantity);
+    }
+}
